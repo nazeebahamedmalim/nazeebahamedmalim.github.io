@@ -1,49 +1,52 @@
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f4f6f9;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #f5f7fb;
   color: #1f2937;
   line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .site-header {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: #0f172a;
   color: #ffffff;
-  padding: 28px 0;
+  padding: 24px 0;
 }
 
 .header-inner {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px;
   text-align: center;
 }
 
 .site-header h1 {
-  margin: 0;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .tagline {
-  margin: 6px 0 18px;
   font-size: 14px;
-  color: #cbd5f5;
+  color: #c7d2fe;
+  margin-bottom: 18px;
 }
 
-/* ===== NAV ===== */
+/* ================= NAV ================= */
 .nav-bar {
   display: flex;
   justify-content: center;
-  gap: 26px;
+  gap: 28px;
 }
 
 .nav-bar a {
-  color: #cbd5f5;
+  color: #c7d2fe;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: 6px;
@@ -53,10 +56,10 @@ body {
 .nav-bar a:hover,
 .nav-bar a.active {
   color: #ffffff;
-  border-color: #38bdf8;
+  border-bottom-color: #38bdf8;
 }
 
-/* ===== LAYOUT ===== */
+/* ================= LAYOUT ================= */
 .container {
   max-width: 1200px;
   margin: 40px auto;
@@ -65,33 +68,41 @@ body {
 
 .section-title {
   font-size: 24px;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
-/* ===== CARD ===== */
+/* ================= CARD ================= */
 .card {
   background: #ffffff;
+  border-radius: 12px;
   padding: 28px;
   margin-bottom: 32px;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
 }
 
 .role {
+  font-size: 14px;
   color: #475569;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* ===== TABLE ===== */
+/* ================= TABLE ================= */
 .experience-table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 12px;
 }
 
 .experience-table th {
-  background: #f1f5f9;
-  text-align: left;
+  background-color: #f1f5f9;
   padding: 14px;
+  text-align: left;
   font-size: 14px;
   border-bottom: 2px solid #e5e7eb;
 }
@@ -103,7 +114,7 @@ body {
 }
 
 .project-col {
-  width: 240px;
+  width: 260px;
 }
 
 .duration {
@@ -111,32 +122,82 @@ body {
   color: #64748b;
 }
 
-/* ===== LISTS ===== */
+/* ================= LISTS ================= */
 ul {
   padding-left: 20px;
+  margin-top: 8px;
+}
+
+ul li {
+  margin-bottom: 8px;
 }
 
 ul ul {
   margin-top: 6px;
 }
 
-li {
-  margin-bottom: 8px;
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
-/* ===== MERGERS IMAGE ===== */
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* ================= IMAGES ================= */
 .mergers-img {
   width: 100%;
   max-width: 1100px;
-  margin-top: 18px;
+  margin-top: 20px;
   border-radius: 10px;
+  display: block;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 .site-footer {
   text-align: center;
-  padding: 20px;
+  padding: 22px;
   font-size: 13px;
   color: #64748b;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .project-col {
+    width: auto;
+  }
+
+  .site-header h1 {
+    font-size: 24px;
+  }
 }
