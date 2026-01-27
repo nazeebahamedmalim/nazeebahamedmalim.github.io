@@ -1,181 +1,142 @@
-/* ===== Base Reset ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Root Theme ===== */
-:root {
-  --primary: #0b1f33;
-  --secondary: #1f3a5f;
-  --accent: #2563eb;
-  --text-main: #1f2933;
-  --text-muted: #6b7280;
-  --bg-main: #f4f6f9;
-  --bg-card: #ffffff;
-  --border-light: #e5e7eb;
-}
-
-/* ===== Body ===== */
 body {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
-  line-height: 1.65;
-  font-size: 16px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f9;
+  color: #1f2937;
+  line-height: 1.6;
 }
 
-/* ===== Header ===== */
-header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+/* ===== HEADER ===== */
+.site-header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #ffffff;
-  padding: 48px 24px 32px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 28px 0;
 }
 
-header h1 {
-  font-size: 34px;
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 30px;
   font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
-header h2 {
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: 400;
-  opacity: 0.9;
+.tagline {
+  margin: 6px 0 18px;
+  font-size: 14px;
+  color: #cbd5f5;
 }
 
-/* ===== Navigation ===== */
+/* ===== NAV ===== */
 .nav-bar {
-  margin-top: 28px;
   display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
 }
 
 .nav-bar a {
-  position: relative;
-  color: #cbd5e1;
+  color: #cbd5f5;
   text-decoration: none;
   font-weight: 500;
-  padding-bottom: 4px;
-  transition: color 0.2s ease;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
 }
 
-.nav-bar a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background-color: #ffffff;
-  transition: width 0.25s ease;
-}
-
-.nav-bar a:hover {
-  color: #ffffff;
-}
-
-.nav-bar a:hover::after {
-  width: 100%;
-}
-
+.nav-bar a:hover,
 .nav-bar a.active {
   color: #ffffff;
-  font-weight: 600;
+  border-color: #38bdf8;
 }
 
-.nav-bar a.active::after {
-  width: 100%;
-}
-
-/* ===== Layout ===== */
+/* ===== LAYOUT ===== */
 .container {
-  max-width: 1100px;
-  margin: 48px auto;
-  padding: 0 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* ===== Cards ===== */
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ===== CARD ===== */
 .card {
-  background: var(--bg-card);
-  padding: 32px;
+  background: #ffffff;
+  padding: 28px;
   margin-bottom: 32px;
   border-radius: 12px;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* ===== Section Titles ===== */
-.section-title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
+.role {
+  color: #475569;
+  margin-bottom: 20px;
 }
 
-/* ===== Text ===== */
-p {
-  margin-bottom: 16px;
+/* ===== TABLE ===== */
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
+.experience-table th {
+  background: #f1f5f9;
+  text-align: left;
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.experience-table td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.project-col {
+  width: 240px;
+}
+
+.duration {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ===== LISTS ===== */
 ul {
-  margin-top: 12px;
   padding-left: 20px;
 }
 
+ul ul {
+  margin-top: 6px;
+}
+
 li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* ===== Buttons ===== */
-.button {
-  display: inline-block;
-  background: var(--accent);
-  color: #ffffff;
-  padding: 12px 22px;
-  margin-right: 12px;
-  margin-top: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+/* ===== MERGERS IMAGE ===== */
+.mergers-img {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.button:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-}
-
-/* ===== Footer ===== */
-footer {
+/* ===== FOOTER ===== */
+.site-footer {
   text-align: center;
-  padding: 24px;
-  margin-top: 60px;
-  font-size: 14px;
-  color: var(--text-muted);
-  background: #ffffff;
-  border-top: 1px solid var(--border-light);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 28px;
-  }
-
-  header h2 {
-    font-size: 16px;
-  }
-
-  .card {
-    padding: 24px;
-  }
+  padding: 20px;
+  font-size: 13px;
+  color: #64748b;
 }
