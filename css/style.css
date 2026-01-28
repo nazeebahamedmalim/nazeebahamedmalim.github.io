@@ -7,21 +7,17 @@
 
 /* ================= BASE ================= */
 body {
-  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
   background-color: #f5f7fb;
-  color: #111827;
+  color: #1f2937;
   line-height: 1.7;
-  font-weight: 450;
   overflow-x: hidden;
 }
 
-/* ================= TYPOGRAPHY ================= */
 p {
-  margin-bottom: 20px;
-}
-
-strong {
-  font-weight: 600;
+  margin-bottom: 18px;
+  font-weight: 400;
 }
 
 /* ================= HEADER ================= */
@@ -41,11 +37,12 @@ strong {
 .site-header h1 {
   font-size: 28px;
   font-weight: 600;
+  margin-bottom: 6px;
 }
 
 .tagline {
   font-size: 14px;
-  color: #e0e7ff;
+  color: #c7d2fe;
   margin-bottom: 18px;
 }
 
@@ -54,18 +51,19 @@ strong {
   display: flex;
   justify-content: center;
   gap: 28px;
+  flex-wrap: wrap;
 }
 
 .nav-bar a {
-  color: #e0e7ff;
+  color: #c7d2fe;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
 }
 
-.nav-bar a.active,
-.nav-bar a:hover {
+.nav-bar a:hover,
+.nav-bar a.active {
   color: #ffffff;
   border-bottom-color: #38bdf8;
 }
@@ -77,6 +75,13 @@ strong {
   padding: 0 20px;
 }
 
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
 /* ================= CARD ================= */
 .card {
   background: #ffffff;
@@ -86,51 +91,32 @@ strong {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* ================= SECTION TITLES ================= */
-.section-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 18px;
-}
-
 /* ================= COMPANY HIGHLIGHT ================= */
 .company-highlight {
   font-size: 20px;
   font-weight: 600;
   padding: 12px 16px;
-  margin-bottom: 14px;
+  margin: 24px 0 10px;
   border-radius: 8px;
   letter-spacing: 0.3px;
 }
 
 .bridgesoft {
   background: linear-gradient(90deg, #e0f2fe, #f8fafc);
+  color: #0f172a;
   border-left: 6px solid #2563eb;
 }
 
 .capgemini {
   background: linear-gradient(90deg, #f1f5f9, #ffffff);
+  color: #0f172a;
   border-left: 6px solid #64748b;
 }
 
-/* ================= TABLE ================= */
-.experience-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.experience-table th {
-  background: #f1f5f9;
-  padding: 14px;
-  font-weight: 600;
-  text-align: left;
-  border-bottom: 2px solid #e5e7eb;
-}
-
-.experience-table td {
-  padding: 14px;
-  border-bottom: 1px solid #e5e7eb;
-  vertical-align: top;
+.role {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 16px;
 }
 
 /* ================= LISTS ================= */
@@ -140,58 +126,91 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+/* ================= TABLE ================= */
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.experience-table th {
+  background-color: #f1f5f9;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.experience-table td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 /* ================= BUTTONS ================= */
 .btn {
-  background: #2563eb;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
   display: inline-block;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background: #1d4ed8;
+  background-color: #1d4ed8;
 }
 
 .btn-outline {
+  display: inline-block;
+  padding: 12px 20px;
   border: 2px solid #2563eb;
   color: #2563eb;
-  padding: 12px 20px;
-  border-radius: 8px;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: 600;
-  display: inline-block;
 }
 
 .btn-outline:hover {
-  background: #2563eb;
+  background-color: #2563eb;
   color: #ffffff;
+}
+
+/* ================= CAPGEMINI SPECIAL PROJECTS ================= */
+.capgemini-subsection {
+  margin-top: 28px;
+  padding: 22px 24px;
+  background: linear-gradient(90deg, #f8fafc, #ffffff);
+  border-left: 4px solid #64748b;
+  border-radius: 10px;
+}
+
+.subsection-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.subsection-desc {
+  font-size: 14.5px;
+  color: #475569;
+  margin-bottom: 14px;
 }
 
 /* ================= IMAGES ================= */
 .mergers-img {
-  display: block;
   width: 100%;
   max-width: 1100px;
   height: auto;
-  margin: 20px auto 0 auto;
+  margin-top: 12px;
   border-radius: 10px;
+  display: block;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* ================= FOOTER ================= */
-.site-footer {
-  text-align: center;
-  padding: 22px;
-  font-size: 13px;
-  color: #475569;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
 }
 
 /* ================= BACK TO TOP ================= */
@@ -206,7 +225,6 @@ ul li {
   width: 46px;
   height: 46px;
   font-size: 18px;
-  font-weight: 600;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -220,7 +238,17 @@ ul li {
   visibility: visible;
 }
 
-/* ================= MOBILE FIXES ================= */
+/* ================= FOOTER ================= */
+.site-footer {
+  text-align: center;
+  padding: 22px;
+  font-size: 13px;
+  color: #64748b;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .container {
@@ -230,19 +258,27 @@ ul li {
 
   .card {
     width: 100%;
-    margin: 0 auto 24px auto;
   }
 
   .company-highlight {
     font-size: 18px;
-    padding: 10px 12px;
   }
 
-  /* Tables → Mobile readable */
+  .subsection-title {
+    font-size: 16.5px;
+  }
+
+  .subsection-desc {
+    font-size: 14px;
+  }
+
+  /* Mobile tables → card-style */
   .experience-table,
+  .experience-table thead,
   .experience-table tbody,
-  .experience-table tr,
-  .experience-table td {
+  .experience-table th,
+  .experience-table td,
+  .experience-table tr {
     display: block;
     width: 100%;
   }
@@ -252,10 +288,11 @@ ul li {
   }
 
   .experience-table tr {
-    background: #f9fafb;
     margin-bottom: 16px;
-    padding: 12px;
+    background: #f9fafb;
     border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
 
   .experience-table td {
@@ -265,40 +302,24 @@ ul li {
 
   .experience-table td::before {
     content: attr(data-label);
+    display: block;
     font-size: 12px;
     font-weight: 600;
     color: #475569;
-    display: block;
     margin-bottom: 4px;
   }
 
-  /* Buttons */
   .btn,
   .btn-outline {
     width: 100%;
     text-align: center;
   }
 
-  /* Lists */
-  ul li {
-    word-break: break-word;
-  }
-
-  /* ✅ MERGERS IMAGE – FINAL GUARANTEED FIX */
-  .mergers-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 16px auto 0 auto;
-    object-fit: contain;
-  }
-
-  /* Back to top mobile */
   #backToTop {
-    bottom: 18px;
-    right: 18px;
     width: 42px;
     height: 42px;
     font-size: 16px;
+    bottom: 18px;
+    right: 18px;
   }
 }
