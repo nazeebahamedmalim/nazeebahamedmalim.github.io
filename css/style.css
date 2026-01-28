@@ -202,4 +202,44 @@ strong {
     width: 100%;
     text-align: center;
   }
+
+  /* ================= MOBILE EXPERIENCE PAGE FIX ================= */
+@media (max-width: 768px) {
+
+  body {
+    background-color: #f5f7fb;
+  }
+
+  .container {
+    margin: 24px auto;
+    padding: 0 14px;
+  }
+
+  .card {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .company-highlight {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+
+  /* Ensure long bullet text wraps properly */
+  ul li {
+    word-break: break-word;
+  }
+
+  /* Special Mergers image – center & scale */
+  .mergers-img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+  
 }
