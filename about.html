@@ -171,7 +171,19 @@
 
 </main>
 
-<footer class="site-footer">© Nazeeb Ahamed Malim</footer>
+<footer class="site-footer">© Nazeeb Ahamed Malim
+<div class="profile-views">
+  Profile Views (Unique): <span id="profileViews">Loading…</span>
+</div>
+
+<script>
+fetch("https://nazeebahamedmalim.goatcounter.com/counter")
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("profileViews").innerText = data.count;
+  });
+</script>
+</footer>
 
 <script data-goatcounter="https://nazeebahamedmalim.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
