@@ -7,7 +7,7 @@
 
 /* ================= BASE ================= */
 body {
-  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   background-color: #f5f7fb;
   color: #1f2937;
@@ -91,34 +91,6 @@ p {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* ================= COMPANY HIGHLIGHT ================= */
-.company-highlight {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 12px 16px;
-  margin: 24px 0 10px;
-  border-radius: 8px;
-  letter-spacing: 0.3px;
-}
-
-.bridgesoft {
-  background: linear-gradient(90deg, #e0f2fe, #f8fafc);
-  color: #0f172a;
-  border-left: 6px solid #2563eb;
-}
-
-.capgemini {
-  background: linear-gradient(90deg, #f1f5f9, #ffffff);
-  color: #0f172a;
-  border-left: 6px solid #64748b;
-}
-
-.role {
-  font-size: 14px;
-  color: #475569;
-  margin-bottom: 16px;
-}
-
 /* ================= LISTS ================= */
 ul {
   padding-left: 20px;
@@ -126,34 +98,13 @@ ul {
 }
 
 ul li {
-  margin-bottom: 8px;
-}
-
-/* ================= TABLE ================= */
-.experience-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 14px;
-}
-
-.experience-table th {
-  background-color: #f1f5f9;
-  padding: 14px;
-  text-align: left;
-  font-size: 14px;
-  border-bottom: 2px solid #e5e7eb;
-}
-
-.experience-table td {
-  padding: 16px;
-  vertical-align: top;
-  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 10px;
 }
 
 /* ================= BUTTONS ================= */
 .btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 22px;
   background-color: #2563eb;
   color: #ffffff;
   text-decoration: none;
@@ -167,7 +118,7 @@ ul li {
 
 .btn-outline {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border: 2px solid #2563eb;
   color: #2563eb;
   text-decoration: none;
@@ -180,64 +131,6 @@ ul li {
   color: #ffffff;
 }
 
-/* ================= CAPGEMINI SPECIAL PROJECTS ================= */
-.capgemini-subsection {
-  margin-top: 28px;
-  padding: 22px 24px;
-  background: linear-gradient(90deg, #f8fafc, #ffffff);
-  border-left: 4px solid #64748b;
-  border-radius: 10px;
-}
-
-.subsection-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 8px;
-}
-
-.subsection-desc {
-  font-size: 14.5px;
-  color: #475569;
-  margin-bottom: 14px;
-}
-
-/* ================= IMAGES ================= */
-.mergers-img {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-  margin-top: 12px;
-  border-radius: 10px;
-  display: block;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* ================= BACK TO TOP ================= */
-#backToTop {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  background-color: #2563eb;
-  color: #ffffff;
-  border: none;
-  border-radius: 50%;
-  width: 46px;
-  height: 46px;
-  font-size: 18px;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  z-index: 999;
-}
-
-#backToTop.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 /* ================= FOOTER ================= */
 .site-footer {
   text-align: center;
@@ -246,6 +139,13 @@ ul li {
   color: #64748b;
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
+}
+
+/* ================= PROFILE VIEWS ================= */
+.profile-views {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748b;
 }
 
 /* ================= MOBILE ================= */
@@ -257,82 +157,22 @@ ul li {
   }
 
   .card {
-    width: 100%;
+    padding: 22px;
   }
 
-  .company-highlight {
-    font-size: 18px;
+  .site-header h1 {
+    font-size: 24px;
   }
 
-  .subsection-title {
-    font-size: 16.5px;
-  }
-
-  .subsection-desc {
-    font-size: 14px;
-  }
-
-  /* Mobile tables → card-style */
-  .experience-table,
-  .experience-table thead,
-  .experience-table tbody,
-  .experience-table th,
-  .experience-table td,
-  .experience-table tr {
-    display: block;
-    width: 100%;
-  }
-
-  .experience-table thead {
-    display: none;
-  }
-
-  .experience-table tr {
-    margin-bottom: 16px;
-    background: #f9fafb;
-    border-radius: 10px;
-    padding: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
-
-  .experience-table td {
-    border: none;
-    padding: 6px 0;
-  }
-
-  .experience-table td::before {
-    content: attr(data-label);
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    color: #475569;
-    margin-bottom: 4px;
+  .section-title {
+    font-size: 21px;
   }
 
   .btn,
   .btn-outline {
+    display: block;
     width: 100%;
     text-align: center;
-  }
-
-  #backToTop {
-    width: 42px;
-    height: 42px;
-    font-size: 16px;
-    bottom: 18px;
-    right: 18px;
-  }
-
-  .profile-views {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #64748b;
-  text-align: center;
-  }
-
-  @media (max-width: 480px) {
-  .profile-views {
-    font-size: 12px;
-  }
+    margin-bottom: 12px;
   }
 }
