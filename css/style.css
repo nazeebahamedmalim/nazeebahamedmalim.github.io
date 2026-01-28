@@ -9,19 +9,14 @@
 body {
   font-family: 'Source Sans 3', Arial, sans-serif;
   background-color: #f5f7fb;
-  color: #111827;              /* DARKER for better contrast */
+  color: #111827;
   line-height: 1.7;
-  font-weight: 450;            /* Slightly stronger than 400 */
+  font-weight: 450;
 }
 
 /* ================= TYPOGRAPHY ================= */
 p {
   margin-bottom: 20px;
-  font-weight: 450;
-}
-
-li {
-  font-weight: 450;
 }
 
 strong {
@@ -45,16 +40,12 @@ strong {
 .site-header h1 {
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 6px;
-  letter-spacing: 0.2px;
-  color: #ffffff;
 }
 
 .tagline {
   font-size: 14px;
-  color: #e0e7ff;              /* Brighter than before */
+  color: #e0e7ff;
   margin-bottom: 18px;
-  font-weight: 400;
 }
 
 /* ================= NAV ================= */
@@ -72,8 +63,8 @@ strong {
   border-bottom: 2px solid transparent;
 }
 
-.nav-bar a:hover,
-.nav-bar a.active {
+.nav-bar a.active,
+.nav-bar a:hover {
   color: #ffffff;
   border-bottom-color: #38bdf8;
 }
@@ -85,118 +76,55 @@ strong {
   padding: 0 20px;
 }
 
-.section-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 18px;
-  letter-spacing: 0.3px;
-  color: #0f172a;              /* Strong heading contrast */
-}
-
 /* ================= CARD ================= */
 .card {
   background: #ffffff;
   border-radius: 12px;
   padding: 28px;
-  margin-bottom: 32px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.card h3 {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: #0f172a;
-}
-
-.role {
-  font-size: 14px;
-  color: #334155;              /* Darker than earlier */
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
   margin-bottom: 18px;
-  font-weight: 400;
 }
 
 /* ================= TABLE ================= */
 .experience-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 12px;
 }
 
 .experience-table th {
-  background-color: #f1f5f9;
+  background: #f1f5f9;
   padding: 14px;
-  text-align: left;
-  font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
-  border-bottom: 2px solid #e5e7eb;
+  text-align: left;
 }
 
 .experience-table td {
-  padding: 16px;
-  vertical-align: top;
+  padding: 14px;
   border-bottom: 1px solid #e5e7eb;
-}
-
-.project-col {
-  width: 260px;
-}
-
-.duration {
-  font-size: 12px;
-  color: #475569;
-  font-weight: 400;
-}
-
-/* ================= LISTS ================= */
-ul {
-  padding-left: 20px;
-  margin-top: 8px;
-}
-
-ul li {
-  margin-bottom: 8px;
 }
 
 /* ================= BUTTONS ================= */
 .btn {
-  display: inline-block;
+  background: #2563eb;
+  color: #fff;
   padding: 12px 20px;
-  background-color: #2563eb;
-  color: #ffffff;
-  text-decoration: none;
   border-radius: 8px;
+  text-decoration: none;
   font-weight: 600;
-}
-
-.btn:hover {
-  background-color: #1d4ed8;
 }
 
 .btn-outline {
-  display: inline-block;
-  padding: 12px 20px;
   border: 2px solid #2563eb;
   color: #2563eb;
-  text-decoration: none;
+  padding: 12px 20px;
   border-radius: 8px;
+  text-decoration: none;
   font-weight: 600;
-}
-
-.btn-outline:hover {
-  background-color: #2563eb;
-  color: #ffffff;
-}
-
-/* ================= IMAGES ================= */
-.mergers-img {
-  width: 100%;
-  max-width: 1100px;
-  margin-top: 20px;
-  border-radius: 10px;
-  display: block;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* ================= FOOTER ================= */
@@ -205,23 +133,47 @@ ul li {
   padding: 22px;
   font-size: 13px;
   color: #475569;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  font-weight: 400;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE TABLE FIX ================= */
 @media (max-width: 768px) {
-  .nav-bar {
-    flex-wrap: wrap;
-    gap: 16px;
+
+  .experience-table,
+  .experience-table tbody,
+  .experience-table tr,
+  .experience-table td {
+    display: block;
+    width: 100%;
   }
 
-  .project-col {
-    width: auto;
+  .experience-table thead {
+    display: none;
   }
 
-  .site-header h1 {
-    font-size: 24px;
+  .experience-table tr {
+    background: #f9fafb;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .experience-table td {
+    border: none;
+    padding: 6px 0;
+  }
+
+  .experience-table td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .btn,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
   }
 }
