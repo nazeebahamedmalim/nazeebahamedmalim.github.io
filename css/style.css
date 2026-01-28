@@ -12,7 +12,6 @@ body {
   background-color: #f5f7fb;
   color: #1f2937;
   line-height: 1.7;
-  overflow-x: hidden;
 }
 
 p {
@@ -91,6 +90,36 @@ p {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* ================= COMPANY HIGHLIGHTS ================= */
+.company-highlight {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.company-highlight.bridgesoft {
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
+}
+
+.company-highlight.capgemini {
+  border-left: 4px solid #16a34a;
+  padding-left: 12px;
+}
+
+.role {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+.duration {
+  font-size: 12px;
+  color: #64748b;
+}
+
 /* ================= LISTS ================= */
 ul {
   padding-left: 20px;
@@ -99,6 +128,67 @@ ul {
 
 ul li {
   margin-bottom: 10px;
+}
+
+/* ================= TABLES ================= */
+.experience-table,
+.awards-table,
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.experience-table th,
+.awards-table th,
+.contact-table th {
+  background-color: #f1f5f9;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.experience-table td,
+.awards-table td,
+.contact-table td {
+  padding: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.project-col {
+  width: 260px;
+}
+
+/* ================= SUBSECTIONS ================= */
+.capgemini-subsection {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.subsection-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subsection-desc {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+/* ================= IMAGES ================= */
+.mergers-img {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 16px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 /* ================= BUTTONS ================= */
@@ -174,5 +264,57 @@ ul li {
     width: 100%;
     text-align: center;
     margin-bottom: 12px;
+  }
+
+  /* Mobile tables */
+  .experience-table,
+  .experience-table thead,
+  .experience-table tbody,
+  .experience-table th,
+  .experience-table td,
+  .experience-table tr,
+  .awards-table,
+  .awards-table thead,
+  .awards-table tbody,
+  .awards-table th,
+  .awards-table td,
+  .awards-table tr,
+  .contact-table,
+  .contact-table thead,
+  .contact-table tbody,
+  .contact-table th,
+  .contact-table td,
+  .contact-table tr {
+    display: block;
+  }
+
+  .experience-table thead,
+  .awards-table thead,
+  .contact-table thead {
+    display: none;
+  }
+
+  .experience-table tr,
+  .awards-table tr,
+  .contact-table tr {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .experience-table td,
+  .awards-table td,
+  .contact-table td {
+    padding: 10px 12px;
+    border: none;
+  }
+
+  .experience-table td::before,
+  .awards-table td::before,
+  .contact-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    color: #0f172a;
   }
 }
