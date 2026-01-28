@@ -12,6 +12,7 @@ body {
   color: #111827;
   line-height: 1.7;
   font-weight: 450;
+  overflow-x: hidden;
 }
 
 /* ================= TYPOGRAPHY ================= */
@@ -81,9 +82,11 @@ strong {
   background: #ffffff;
   border-radius: 12px;
   padding: 28px;
+  margin-bottom: 32px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* ================= SECTION TITLES ================= */
 .section-title {
   font-size: 24px;
   font-weight: 600;
@@ -91,7 +94,6 @@ strong {
 }
 
 /* ================= COMPANY HIGHLIGHT ================= */
-
 .company-highlight {
   font-size: 20px;
   font-weight: 600;
@@ -101,20 +103,15 @@ strong {
   letter-spacing: 0.3px;
 }
 
-/* Bridgesoft – Primary / Current */
 .bridgesoft {
   background: linear-gradient(90deg, #e0f2fe, #f8fafc);
-  color: #0f172a;
   border-left: 6px solid #2563eb;
 }
 
-/* Capgemini – Previous / Legacy */
 .capgemini {
   background: linear-gradient(90deg, #f1f5f9, #ffffff);
-  color: #0f172a;
   border-left: 6px solid #64748b;
 }
-
 
 /* ================= TABLE ================= */
 .experience-table {
@@ -127,21 +124,38 @@ strong {
   padding: 14px;
   font-weight: 600;
   text-align: left;
+  border-bottom: 2px solid #e5e7eb;
 }
 
 .experience-table td {
   padding: 14px;
   border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+/* ================= LISTS ================= */
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
 }
 
 /* ================= BUTTONS ================= */
 .btn {
   background: #2563eb;
-  color: #fff;
+  color: #ffffff;
   padding: 12px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #1d4ed8;
 }
 
 .btn-outline {
@@ -151,6 +165,23 @@ strong {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ================= IMAGES ================= */
+.mergers-img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 20px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* ================= FOOTER ================= */
@@ -159,11 +190,55 @@ strong {
   padding: 22px;
   font-size: 13px;
   color: #475569;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
 }
 
-/* ================= MOBILE TABLE FIX ================= */
+/* ================= BACK TO TOP ================= */
+#backToTop {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================= MOBILE FIXES ================= */
 @media (max-width: 768px) {
 
+  .container {
+    margin: 24px auto;
+    padding: 0 14px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto 24px auto;
+  }
+
+  .company-highlight {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+
+  /* Tables → Mobile readable */
   .experience-table,
   .experience-table tbody,
   .experience-table tr,
@@ -197,66 +272,33 @@ strong {
     margin-bottom: 4px;
   }
 
+  /* Buttons */
   .btn,
   .btn-outline {
     width: 100%;
     text-align: center;
   }
 
-  /* ================= MOBILE EXPERIENCE PAGE FIX ================= */
-@media (max-width: 768px) {
-
-  body {
-    background-color: #f5f7fb;
-  }
-
-  .container {
-    margin: 24px auto;
-    padding: 0 14px;
-  }
-
-  .card {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .company-highlight {
-    font-size: 18px;
-    padding: 10px 12px;
-  }
-
-  /* Ensure long bullet text wraps properly */
+  /* Lists */
   ul li {
     word-break: break-word;
   }
 
-  /* Special Mergers image – center & scale */
+  /* ✅ MERGERS IMAGE – FINAL GUARANTEED FIX */
   .mergers-img {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* ================= MERGERS IMAGE MOBILE FIX ================= */
-@media (max-width: 768px) {
-
-  .mergers-img {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
     margin: 16px auto 0 auto;
     object-fit: contain;
   }
 
-  /* Prevent any horizontal scroll */
-  body {
-    overflow-x: hidden;
+  /* Back to top mobile */
+  #backToTop {
+    bottom: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
   }
-}
-
-
-  
 }
