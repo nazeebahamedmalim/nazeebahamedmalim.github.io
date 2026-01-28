@@ -90,6 +90,32 @@ strong {
   margin-bottom: 18px;
 }
 
+/* ================= COMPANY HIGHLIGHT ================= */
+
+.company-highlight {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+}
+
+/* Bridgesoft – Primary / Current */
+.bridgesoft {
+  background: linear-gradient(90deg, #e0f2fe, #f8fafc);
+  color: #0f172a;
+  border-left: 6px solid #2563eb;
+}
+
+/* Capgemini – Previous / Legacy */
+.capgemini {
+  background: linear-gradient(90deg, #f1f5f9, #ffffff);
+  color: #0f172a;
+  border-left: 6px solid #64748b;
+}
+
+
 /* ================= TABLE ================= */
 .experience-table {
   width: 100%;
