@@ -12,6 +12,11 @@ body {
   line-height: 1.6;
 }
 
+/* ================= PARAGRAPHS ================= */
+p {
+  margin-bottom: 20px;
+}
+
 /* ================= HEADER ================= */
 .site-header {
   background: #0f172a;
@@ -200,9 +205,4 @@ ul ul {
   .site-header h1 {
     font-size: 24px;
   }
-
-  p {
-  margin-bottom: 20px;
-}
-  
 }
