@@ -9,19 +9,19 @@
 body {
   font-family: 'Source Sans 3', Arial, sans-serif;
   background-color: #f5f7fb;
-  color: #1f2937;
+  color: #111827;              /* DARKER for better contrast */
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: 450;            /* Slightly stronger than 400 */
 }
 
 /* ================= TYPOGRAPHY ================= */
 p {
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 li {
-  font-weight: 400;
+  font-weight: 450;
 }
 
 strong {
@@ -47,11 +47,12 @@ strong {
   font-weight: 600;
   margin-bottom: 6px;
   letter-spacing: 0.2px;
+  color: #ffffff;
 }
 
 .tagline {
   font-size: 14px;
-  color: #c7d2fe;
+  color: #e0e7ff;              /* Brighter than before */
   margin-bottom: 18px;
   font-weight: 400;
 }
@@ -64,7 +65,7 @@ strong {
 }
 
 .nav-bar a {
-  color: #c7d2fe;
+  color: #e0e7ff;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: 6px;
@@ -89,6 +90,7 @@ strong {
   font-weight: 600;
   margin-bottom: 18px;
   letter-spacing: 0.3px;
+  color: #0f172a;              /* Strong heading contrast */
 }
 
 /* ================= CARD ================= */
@@ -104,11 +106,12 @@ strong {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 6px;
+  color: #0f172a;
 }
 
 .role {
   font-size: 14px;
-  color: #475569;
+  color: #334155;              /* Darker than earlier */
   margin-bottom: 18px;
   font-weight: 400;
 }
@@ -126,6 +129,7 @@ strong {
   text-align: left;
   font-size: 14px;
   font-weight: 600;
+  color: #0f172a;
   border-bottom: 2px solid #e5e7eb;
 }
 
@@ -141,7 +145,7 @@ strong {
 
 .duration {
   font-size: 12px;
-  color: #64748b;
+  color: #475569;
   font-weight: 400;
 }
 
@@ -153,10 +157,6 @@ ul {
 
 ul li {
   margin-bottom: 8px;
-}
-
-ul ul {
-  margin-top: 6px;
 }
 
 /* ================= BUTTONS ================= */
@@ -204,7 +204,7 @@ ul ul {
   text-align: center;
   padding: 22px;
   font-size: 13px;
-  color: #64748b;
+  color: #475569;
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
   font-weight: 400;
