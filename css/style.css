@@ -322,4 +322,17 @@ ul li {
     bottom: 18px;
     right: 18px;
   }
+
+  .profile-views {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748b;
+  text-align: center;
+  }
+
+  @media (max-width: 480px) {
+  .profile-views {
+    font-size: 12px;
+  }
+  }
 }
